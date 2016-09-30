@@ -10,6 +10,8 @@ export function fetchWeather(city){
 	const url = `${ROOT_URL}&q=${city},us`;
 	const request = axios.get(url); 
 
+
+	// middleware allows request to finish before sending off action (async -> sync);
 	return {
 		type: FETCH_WEATHER,
 		payload: request
